@@ -1,0 +1,50 @@
+.servicePageContainer {
+  overflow: hidden;
+}
+
+.serviceNavbarWrapper {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.servicePageContentWrapper {
+  width: 100vw;
+  display: flex;
+  /* height: calc(100vh - 7vh); */
+  margin-top: 7vh;
+}
+
+.serviceExplanation {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.serviceImg {
+  width: 40vw;
+  height: 100%;
+}
+
+.serviceImg img {
+  position: fixed;
+  top: 7vh;
+  /* object-fit: cover; */
+  width: 40vw;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .serviceExplanation {
+    width: 90%;
+  }
+
+  .servicePageContentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,150 @@
+.homePicture {
+  position: relative;
+  width: 100%;
+  height: 93vh; /* Full screen height */
+  /* overflow: hidden; */
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlayLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+  z-index: 1;
+}
+
+.overlayContent {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  /* text-align: center; */
+  color: white;
+}
+.overlayContent h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.overlayCom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.homeBook {
+  background-color: var(--blueColor);
+  color: white;
+  border-radius: 25px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+.phone {
+  background-color: var(--greenColor);
+  color: white;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+}
+
+.halfOverlappingContainer {
+  position: relative;
+  top: -80px;
+  margin: 0 auto;
+  width: 90%;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.halfOverlappingContainerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.halfOverlappingContainerRight > div {
+  cursor: pointer;
+}
+
+.halfOverlappingContainerRight > p {
+  font-size: 2rem;
+  margin: 0 5px 0 50px;
+}
+
+.halfOverLappingIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.halfOverLappingIconYelp {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .halfOverlappingContainer {
+    height: 50px !important;
+    padding: 0;
+    top: -30px;
+  }
+
+  .halfOverLappingIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .halfOverlappingContainerRight > p {
+    font-size: 1rem;
+    margin: 0 5px 0 50px;
+  }
+  .overlayContent {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+  }
+
+  .overlayContent h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .overlayCom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .homeBook {
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+  }
+
+  .phone {
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+  }
+}

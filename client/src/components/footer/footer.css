@@ -1,0 +1,119 @@
+.footerContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+  background-color: var(--blueColor);
+  color: white;
+  margin-top: 50px;
+}
+
+.footeLogo {
+  max-height: 150px;
+  max-width: 200px;
+  margin-left: 200px;
+  display: flex;
+  /* align-items: stretch; */
+  /* border: 4px red solid; */
+}
+
+.footeLogo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  border: 4px white solid;
+}
+.footerText {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+.footerLinks {
+  color: #61dafb;
+  text-decoration: none;
+  margin-left: 5px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.footerLinks p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.footerContact h1 {
+  margin-bottom: 15px;
+}
+
+.footerContactUs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 5px; /* optional: space between icon and text */
+  justify-content: flex-start; /* <-- align items from the start instead of center */
+}
+
+.footerContactUs div,
+.footerContactUs p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerContactUs p {
+  font-size: 14px;
+  color: white;
+}
+
+.footerPrivacyText {
+  flex-basis: 100%;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #b0c7e0; /* Daha açık ve soft mavi ton */
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.footerPrivacyText p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footeLogo {
+    max-height: 100px;
+    max-width: 100px;
+    margin-left: 0px;
+    display: flex;
+    align-items: stretch;
+    /* border: 4px white solid; */
+    border-radius: 10px;
+  }
+
+  .footeLogo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain; /* Oran bozulmasın */
+    display: block;
+    border-radius: 10px;
+  }
+}

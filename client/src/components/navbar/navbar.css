@@ -1,0 +1,110 @@
+.navbarContainer {
+  width: 100vw;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+  background-color: white;
+}
+
+.navbarLogo {
+  font-weight: bold;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.navbarLogo img {
+  height: 100%;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.navbarLinks button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+  border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.navbarLinks button:nth-child(5) {
+  background-color: #358ea2;
+  color: white;
+  border-radius: 25px;
+  padding: 11px 16px;
+  margin-left: 10px;
+  font-size: 18px;
+  border-bottom: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.line {
+  height: 3px;
+  background: #358ea2;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbarLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 7vh;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 20px;
+    display: none;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .navbarLinks.open {
+    display: flex;
+  }
+
+  .navbarLinks button {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* .navbarLogo {
+    max-width: 40%;
+  } */
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

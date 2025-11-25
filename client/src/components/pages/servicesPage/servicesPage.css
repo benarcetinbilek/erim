@@ -1,0 +1,8 @@
+.servicesPageContainer {
+  overflow: hidden;
+}
+.servicesPageContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

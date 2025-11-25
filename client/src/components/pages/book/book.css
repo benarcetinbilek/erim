@@ -1,0 +1,244 @@
+.bookContainer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bookPicContainer {
+  position: relative;
+  width: 100%;
+}
+
+.bookPicContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.bookPicText {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.bookFormContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: white;
+  width: 70%;
+}
+
+.formWrapper {
+  flex: 1;
+  padding: 0 10rem;
+}
+
+.bookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.bookForm input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.bookSelect {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.two-col {
+  display: flex;
+  gap: 1rem;
+}
+
+.two-col > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  background-color: #ffe5e5;
+  padding: 0.3rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.sendBtn {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #ffbf00;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  background-color: #e6a800;
+}
+
+.bookContactInfo {
+  flex: 1;
+  min-width: 200px;
+  /* border: 1px solid #ccc; */
+  position: relative;
+  /* border: 2px red solid; */
+}
+
+/* .bookContactInfo {
+  flex: 1;
+  min-width: 250px;
+} */
+
+.bookContactInfo h1 {
+  margin-bottom: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.infoItem .icon {
+  font-size: 1.5rem;
+  color: #358ea2;
+  min-width: 24px;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* border: 2px solid green; */
+}
+
+.priceWrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background: #358ea2;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.extrasGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+  gap: 30px;
+}
+
+.extraItem {
+  width: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.extraItem.selected {
+  background-color: #d2f2e4;
+  border-color: #27ae60;
+}
+
+.countInputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.extraItem:hover {
+  background-color: #f3f3f3;
+}
+
+.shortDesc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* longDescription gizli */
+.longDesc {
+  font-size: 13px;
+  color: #333;
+  margin-top: 8px;
+  display: none;
+}
+
+.tooltipBox {
+  display: none;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  transform: translateY(-100%);
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  width: 180px;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip ok işareti (isteğe bağlı) */
+.tooltipBox::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 15px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #222 transparent transparent transparent;
+}
+
+.extraItem {
+  position: relative;
+}
+
+.extraItem:hover .tooltipBox {
+  display: block;
+}
+
+.extraIcon {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  vertical-align: middle;
+  filter: brightness(0) saturate(100%) invert(42%) sepia(22%) saturate(651%)
+    hue-rotate(145deg) brightness(91%) contrast(88%);
+}
+
+.countInput {
+  width: 80%;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .bookPicText {
+    font-size: 1.5rem;
+  }
+}
