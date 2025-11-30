@@ -37,6 +37,7 @@ const Navbar = () => {
         <button data-route="/aboutus">About Us</button>
         <button data-route="/gallery">Gallery</button>
         <button data-route="/book">Book now →</button>
+        <button data-route="/LoginSignup">Login / Sign Up</button>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

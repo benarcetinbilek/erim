@@ -6,6 +6,7 @@ import Book from "./components/pages/book/Book";
 import Gallery from "./components/pages/gallery/Gallery";
 import Service from "./components/pages/service/Service";
 import ServicesPage from "./components/pages/servicesPage/ServicesPage";
+import AuthPage from "./components/pages/loginSignup/AuthPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/service/:id" element={<Service />} />
+          <Route path="/LoginSignup" element={<AuthPage />} />
         </Routes>
       </Router>
     </>
@@ -25,3 +27,11 @@ function App() {
 }
 
 export default App;
+
+//  <Route path="/" element={<Home />} />
+//           <Route path="/programs" element={<ServicesPage />} />
+//           <Route path="/gallery" element={<Gallery />} />
+//           <Route path="/articles" element={<Articles />} />
+//           <Route path="/aboutus" element={<AboutUs />} />
+//           <Route path="/calculator" element={<Book />} />
+//           <Route path="/service/:id" element={<Service />} />

@@ -28,7 +28,7 @@ const Book = () => {
   const [extras, setExtras] = useState([
     {
       id: 1,
-      title: "Deep Cleaning",
+      title: "Deep Clean",
       description: "Recommended if last cleaning was 1-2 months ago",
       longDescription:
         "Adds 80$ A thorough cleaning service for homes cleaned recently",
@@ -36,11 +36,11 @@ const Book = () => {
       selected: false,
       src: "/extraIcons/deep-cleaning.svg",
       isImgClose: false,
-      price: 80,
+      price: 105,
     },
     {
       id: 2,
-      title: "Double Deep Cleaning",
+      title: "Double Deep Clean",
       description: "Recommended if last cleaning was 3+ months ago",
       longDescription:
         "Adds 160$ Ideal for homes that haven't been cleaned in a long time",
@@ -50,18 +50,18 @@ const Book = () => {
       isImgClose: false,
       price: 160,
     },
-    // {
-    //   id: 3,
-    //   title: "Post-Construction",
-    //   description: "For homes after renovation",
-    //   longDescription:
-    //     "Adds 240$ Removes dust, paint residue, and post-build debris",
-    //   ifCount: false,
-    //   selected: false,
-    //   src: "/extraIcons/post-constraction.svg",
-    //   isImgClose: false,
-    //   price: 240,
-    // },
+    {
+      id: 3,
+      title: "Post-Construction",
+      description: "For homes after renovation",
+      longDescription:
+        "Adds 240$ Removes dust, paint residue, and post-build debris",
+      ifCount: false,
+      selected: false,
+      src: "/extraIcons/post-constraction.svg",
+      isImgClose: false,
+      price: 240,
+    },
     {
       id: 4,
       title: "Inside the Fridge",
@@ -77,24 +77,24 @@ const Book = () => {
       id: 5,
       title: "Inside the Oven",
       description: "Interior of the oven will be cleaned",
-      longDescription: "Adds 40$ Degreasing and deep cleaning of oven surfaces",
+      longDescription: "Adds 30$ Degreasing and deep cleaning of oven surfaces",
       ifCount: false,
       selected: false,
       src: "/extraIcons/inside-the-oven.svg",
       isImgClose: false,
-      price: 40,
+      price: 30,
     },
     {
       id: 6,
       title: "Hand Wipe Baseboards",
       description: "Detailed hand cleaning of baseboards",
       longDescription:
-        "Adds 25$ Includes scrubbing and dirt removal from trim areas",
+        "Adds 35$ Includes scrubbing and dirt removal from trim areas",
       ifCount: false,
       selected: false,
       src: "/extraIcons/hand-wipe-baseboards.svg",
       isImgClose: false,
-      price: 25,
+      price: 35,
     },
     {
       id: 7,
@@ -123,49 +123,47 @@ const Book = () => {
       id: 9,
       title: "Deep Cleaning of Blinds",
       description: "Detailed blind cleaning",
-      longDescription: "Adds 40$ Hand-wiped or vacuumed depending on material",
+      longDescription: "Adds 60$ Hand-wiped or vacuumed depending on material",
       ifCount: false,
       selected: false,
       src: "/extraIcons/deep-cleaning-of-blinds.svg",
       isImgClose: false,
-      price: 40,
+      price: 60,
     },
     {
       id: 10,
-      title: "Interior Window",
+      title: "interior window",
       description: "Interior window glass and frames",
       longDescription:
-        "Adds 40$ Cleaning of smudges, dirt, and debris from inside",
-      ifCount: true,
+        "Adds 60$ Cleaning of smudges, dirt, and debris from inside",
+      ifCount: false,
       selected: false,
-      count: 1,
       src: "/extraIcons/interior-window.svg",
-      isImgClose: true,
-      price: 40,
+      isImgClose: false,
+      price: 60,
     },
     {
       id: 11,
       title: "Exterior Window Cleaning",
       description: "Outside window cleaning",
-      longDescription: "Adds 25$ Reachable exterior windows will be cleaned",
-      ifCount: true,
+      longDescription: "Adds 15$ Reachable exterior windows will be cleaned",
+      ifCount: false,
       selected: false,
-      count: 1,
       src: "/extraIcons/exterior-window-cleaning.svg",
-      isImgClose: true,
-      price: 25,
+      isImgClose: false,
+      price: 15,
     },
     {
       id: 12,
       title: "Sweep Balcony, Patio, or Garage",
       description: "Outdoor floor sweep-up",
       longDescription:
-        "Adds 40$ Removes dust, leaves, and debris from outdoor areas",
+        "Adds 20$ Removes dust, leaves, and debris from outdoor areas",
       ifCount: false,
       selected: false,
       src: "/extraIcons/sweep-balcony.svg",
       isImgClose: false,
-      price: 40,
+      price: 20,
     },
     {
       id: 13,
@@ -196,12 +194,12 @@ const Book = () => {
       title: "Pet Hair Removal",
       description: "Remove pet hair from floors and surfaces",
       longDescription:
-        "Adds 60$ Detailed vacuuming and lint removal from furniture",
+        "Adds 40$ Detailed vacuuming and lint removal from furniture",
       ifCount: false,
       selected: false,
       src: "/extraIcons/pet.svg",
       isImgClose: false,
-      price: 60,
+      price: 40,
     },
     {
       id: 16,
@@ -268,8 +266,6 @@ const Book = () => {
     if (!form.sqft)
       newErrors.sqft =
         "This field is required. Please enter the square footage.";
-    if (!form.often)
-      newErrors.often = "This field is required. Please select how often.";
 
     setErrors(newErrors);
 
@@ -361,12 +357,12 @@ const Book = () => {
     }
 
     // 2. Square Footage
-    // const sqft = parseInt(form.sqft, 10);
-    // if (!isNaN(sqft) && sqft > 50) {
-    //   const extraSqft = sqft - 50;
-    //   const stepsOf100 = Math.ceil(extraSqft / 100);
-    //   price += stepsOf100 * 50;
-    // }
+    const sqft = parseInt(form.sqft, 10);
+    if (!isNaN(sqft) && sqft > 50) {
+      const extraSqft = sqft - 50;
+      const stepsOf100 = Math.ceil(extraSqft / 100);
+      price += stepsOf100 * 50;
+    }
 
     // 3. Extras
     const selectedExtras = extras.filter((extra) => extra.selected);
@@ -507,10 +503,10 @@ const Book = () => {
             >
               <option value="">-- Select Time --</option>
               <option value="one Time">One time </option>
-              <option value="Once every week">Every week</option>
-              <option value="Once every 2 weeks">Every 2 weeks</option>
-              {/* <option value="Once every 3 weeks">Every 3 weeks</option> */}
-              <option value="Once every 4 weeks">Once a month</option>
+              <option value="Once every week">Once every week</option>
+              <option value="Once every 2 weeks">Once every 2 weeks</option>
+              <option value="Once every 3 weeks">Once every 3 weeks</option>
+              <option value="Once every 4 weeks">Once every 4 weeks</option>
             </select>
 
             {errors.often && <span className="error">{errors.often}</span>}
@@ -572,8 +568,8 @@ const Book = () => {
               <TwotonePhoneInTalk />
             </span>
             <div>
-              <strong>Contact Number</strong>
-              <p>+1 855 551 5445</p>
+              <strong>Number</strong>
+              <p>855 551 5445</p>
             </div>
           </div>
 
@@ -582,7 +578,7 @@ const Book = () => {
               <OutlineWatchLater />
             </span>
             <div>
-              <strong>Working Hours</strong>
+              <strong>Work Hrs</strong>
               <p>Mon - Sun: 7:00 AM - 7:00 PM</p>
             </div>
           </div>
@@ -592,22 +588,19 @@ const Book = () => {
               <BaselineAlternateEmail />
             </span>
             <div>
-              <strong>Service Areas</strong>
-              <p>Orange County</p>
-              <p>Ventura County</p>
-              <p>Los Angeles County</p>
-              <p>South Bay</p>
+              <strong>Location</strong>
+              <p>California</p>
             </div>
           </div>
 
-          {/* <div className="infoItem">
+          <div className="infoItem">
             <span className="icon">
               <SomeInstagram />
             </span>
             <div>
               <strong>Follow Our Instagram</strong>
             </div>
-          </div> */}
+          </div>
           <div className="priceContainer">
             <div className="priceWrapper">Total: {totalPrice}$</div>
           </div>

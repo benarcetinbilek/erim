@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="footerContactUs">
           <TwotonePhoneInTalk />
 
-          <p>+1 855 551 5445</p>
+          <p>855 551 5445</p>
         </div>
         <div className="footerContactUs">
           <BaselineAlternateEmail />
@@ -60,10 +60,10 @@ const Footer = () => {
         <div className="footerContactUs">
           <TravelMapLocationPinNavigationMapMapsPinGpsLocation />
 
-          <p>Los Angeles, California</p>
+          <p>California</p>
         </div>
-        <div className="footerContactUs links" style={{ cursor: "pointer" }}>
-          {/* <SomeInstagram />{" "} */}
+        <div className="footerContactUs links">
+          <SomeInstagram />{" "}
           <Yelp
             onClick={() =>
               window.open(
@@ -71,7 +71,6 @@ const Footer = () => {
               )
             }
           />
-          Yelp
         </div>
       </div>
     </div>

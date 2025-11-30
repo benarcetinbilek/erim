@@ -34,7 +34,7 @@ const SectionOne = () => {
           <button className="homeBook" onClick={() => navigate("/book")}>
             Get a Quote
           </button>
-          <button className="phone">+1 855 551 5445</button>
+          <button className="phone">855 551 5445</button>
         </div>
       </div>
 
@@ -42,7 +42,7 @@ const SectionOne = () => {
         {!isMobile && (
           <div className="halfOverlappingContainerLeft">
             <h2>Reach Us</h2>
-            <p>For top quality cleaning for homes, offices, and more...</p>
+            <p>For top-quality cleaning for homes, offices, and more...</p>
           </div>
         )}
 
@@ -51,7 +51,7 @@ const SectionOne = () => {
             className="halfOverlappingContainerRightInstagram"
             onClick={() => console.log("Instagram Clicked")}
           >
-            {/* <Instagram className="halfOverLappingIcon" /> */}
+            <Instagram className="halfOverLappingIcon" />
           </div>
           <p>Yelp</p>
           <div

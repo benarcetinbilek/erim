@@ -1,0 +1,100 @@
+/* PAGE WITH BACKGROUND IMAGE */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../../../public/bg.jpg"); /* BURAYA kendi resim yolunu koy */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR FIXED TO TOP */
+.page > *:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* WRAPPER – Card ortalama */
+.authPageWrapper {
+  flex: 1; /* Navbar yüksekliğinden sonra kalan alan */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 0;
+}
+
+/* CARD */
+.card {
+  width: 380px;
+  padding: 40px 35px;
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+  text-align: center;
+  color: black;
+}
+
+/* TITLE */
+.title {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* INPUT */
+.input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.input::placeholder {
+  color: black;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 10px;
+  background: white;
+  color: #4a148c;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* TOGGLE TEXT */
+.toggle-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.toggle {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
